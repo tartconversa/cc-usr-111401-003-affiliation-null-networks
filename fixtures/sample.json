@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "data_version": "sample-1",
+    "forbidden": [],
+    "frozen": []
+  },
+  "collections": {
+    "events": [
+      {
+        "id": "e1",
+        "revision": 1,
+        "layer": "summer",
+        "members": [
+          "t1",
+          "t2"
+        ]
+      },
+      {
+        "id": "e2",
+        "revision": 1,
+        "layer": "summer",
+        "members": [
+          "t2",
+          "t3"
+        ]
+      }
+    ],
+    "teams": [
+      {
+        "id": "t1",
+        "revision": 1,
+        "kind": "高校",
+        "village": "v1",
+        "layers": [
+          "summer"
+        ]
+      },
+      {
+        "id": "t2",
+        "revision": 1,
+        "kind": "运营",
+        "village": "v2",
+        "layers": [
+          "summer"
+        ]
+      },
+      {
+        "id": "t3",
+        "revision": 1,
+        "kind": "村集体",
+        "village": "v3",
+        "layers": [
+          "summer"
+        ]
+      }
+    ]
+  }
+}
