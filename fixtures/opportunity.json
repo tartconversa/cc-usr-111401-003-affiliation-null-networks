@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "data_version": "opportunity-1",
+    "forbidden": [
+      ["2025夏", "a2", "t2"]
+    ],
+    "frozen": [
+      ["2025夏", "a1", "t3"]
+    ]
+  },
+  "collections": {
+    "events": [
+      {"id": "a1", "revision": 1, "layer": "2025夏", "members": ["t1", "t2", "t3"]},
+      {"id": "a2", "revision": 1, "layer": "2025夏", "members": ["t1", "t4"]},
+      {"id": "a3", "revision": 1, "layer": "2025夏", "members": ["t2", "t3", "t4"]},
+      {"id": "a4", "revision": 1, "layer": "2025夏", "members": ["t3", "t5"]},
+      {"id": "b1", "revision": 1, "layer": "2025冬", "members": ["t1", "t2"]}
+    ],
+    "teams": [
+      {"id": "t1", "revision": 1, "kind": "高校", "village": "v1", "layers": ["2025夏", "2025冬"]},
+      {"id": "t2", "revision": 1, "kind": "运营", "village": "v2", "layers": ["2025夏", "2025冬"]},
+      {"id": "t3", "revision": 1, "kind": "村集体", "village": "v1", "layers": ["2025夏"]},
+      {"id": "t4", "revision": 1, "kind": "高校", "village": "v2", "layers": ["2025夏"]},
+      {"id": "t5", "revision": 1, "kind": "企业", "village": "v3", "layers": ["2025夏"]},
+      {"id": "t6", "revision": 1, "kind": "返乡青年", "village": "v3", "layers": ["2025夏"]}
+    ]
+  }
+}

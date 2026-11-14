@@ -14,6 +14,18 @@ events 含 layer 和 members，成员为团队键集合；同一团队在同一�
 
 各集合必要字段：{"events": ["layer", "members"], "teams": ["kind", "village", "layers"]}。
 
+## 禁配与冻结三元组
+
+metadata.forbidden 与 metadata.frozen 为[层,活动,团队]三元组数组，缺省为空。
+机会校正分析中：forbidden 声明结构性禁配，参照状态不得出现；frozen 声明已冻结参与，
+参照状态必须保留且交换不可移除。校验规则：三元组指向的活动、团队必须存在且层一致；
+禁配与已观察参与冲突、冻结未在资料中出现、冻结与禁配相交均为输入错误；
+禁配指向本无该层参与资格的团队按空转处理并在报告中披露。
+
 ## 当前能力
 
-app.baseline.analyze(snapshot)产生已有摘要，app.service.inspect负责绑定输入身份；新增分析可以增设独立入口，已有接口及上述数据语义保持兼容。
+app.baseline.analyze(snapshot)产生已有摘要，app.service.inspect负责绑定输入身份；
+app.opportunity.inspect(payload, config=None)为机会校正网络分析入口，
+输出固定参与机会的二部参照下各统计量的观察值、参照分布、经验与精确p值、
+BH校正q值、具体结构明细（含对应活动）、拒绝原因台账与混合诊断；
+方法论与配置项见 docs/opportunity.md。已有接口及上述数据语义保持兼容。
